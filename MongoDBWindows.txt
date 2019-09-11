@@ -1,0 +1,29 @@
+Windows:
+
+1. First make sure that the folders data\db and data\log exists under c: drive
+2> create file 'mongod.cfg' inside the mongodb installation folder and add the below contents(In may case the installation location is C:\Program Files\mongodb-3.4.22):
+
+systemLog:
+    destination: file
+    path: c:\data\log\mongod.log
+storage:
+    dbPath: c:\data\db
+net:
+  port: 27017
+
+3. start mongodb server from command prompt by executing -> .\bin\mongod.exe --config .\mongod.cfg
+
+4. Open another command prompt to create the databse and tables for Task Manager project using the attached script 'WindowsScript.js':
+
+Command Format: mongo <host>/database <Path to the script>
+
+In my case, the command is:
+.\bin\mongo.exe localhost/task_manager F:\CogAssignments\CaseStudy-TaskManager\DataTier\WindowsScript.js
+
+5. start mongo client from command prompt by executing -> .\bin\mongo.exe
+
+6. Validate the Task Manager project tables by executing the below commands once the mongo client is running
+
+show dbs
+use task_manager
+show collections
