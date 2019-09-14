@@ -13,10 +13,10 @@
       port: 27017
     ```
     
-3. From commond prompt, go inside the mongodb installation  folder and start mongodb server by executing:  
+3. From commond prompt, go inside the mongodb installation folder and start mongodb server by executing:  
    `.\bin\mongod.exe --config .\mongod.cfg`  
 
-4. Open another command prompt to create the databse and tables for Task Manager project using the attached script **WindowsScript.js**:  
+4. Open another command prompt, go inside the mongodb installation folder to create the database and tables for Task Manager project using the attached script **WindowsScript.js**:  
    Command Format: `mongo [host]/database [Path-to-script]`
 
    In my case, the command is:  
